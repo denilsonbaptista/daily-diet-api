@@ -12,7 +12,9 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "fastify": "^4.28.0"
+    "fastify": "^4.28.0",
+    "knex": "^3.1.0",
+    "sqlite3": "^5.1.7"
   },
   "devDependencies": {
     "@rocketseat/eslint-config": "^2.2.2",
