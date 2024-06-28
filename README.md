@@ -1,6 +1,6 @@
 ### Requisitos Funcionais
 
-- [ ] Deve ser possível criar um usuário
+- [x] Deve ser possível criar um usuário
 - [ ] Deve ser possível identificar o usuário entre as requisições
 - [ ] Deve ser possível recuperar as métricas de um usuário
   - [ ] Quantidade total de refeições registradas
