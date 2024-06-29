@@ -8,7 +8,7 @@
   - [ ] Quantidade total de refeições fora da dieta
   - [ ] Melhor sequência de refeições dentro da dieta
   - [ ] Porcentagem de refeições dentro da dieta
-- [ ] Deve ser possível registrar uma refeição feita, com as seguintes informações:  
+- [x] Deve ser possível registrar uma refeição feita, com as seguintes informações:  
     *As refeições devem ser relacionadas a um usuário.*
   - Nome
   - Descrição

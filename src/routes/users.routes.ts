@@ -22,7 +22,7 @@ export async function usersRoutes(app: FastifyInstance) {
 
     const sessionId = randomUUID()
 
-    reply.setCookie('session_id', sessionId, {
+    reply.setCookie('sessionId', sessionId, {
       path: '/',
       maxAge: 60 * 60 * 24 * 7, // 7 days
     })
@@ -34,8 +34,6 @@ export async function usersRoutes(app: FastifyInstance) {
       session_id: sessionId,
     })
 
-    const user = await knex('users').where('email', email).first()
-
-    return reply.status(201).send(user)
+    return reply.status(201).send()
   })
 }
