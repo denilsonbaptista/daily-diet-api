@@ -36,4 +36,33 @@ export async function usersRoutes(app: FastifyInstance) {
 
     return reply.status(201).send()
   })
+
+  app.post('/session', async (request, reply) => {
+    const createSessionBodySchema = z.object({
+      email: z.string().email(),
+    })
+
+    const { email } = createSessionBodySchema.parse(request.body)
+
+    const user = await knex('users').where('email', email).first()
+
+    if (user) {
+      const sessionId = randomUUID()
+
+      reply.setCookie('sessionId', sessionId, {
+        path: '/',
+        maxAge: 60 * 60 * 24 * 7, // 7 days
+      })
+
+      await knex('users')
+        .update({ session_id: sessionId })
+        .where('email', email)
+    } else {
+      return reply.status(400).send({
+        error: 'User does not exist',
+      })
+    }
+
+    return reply.status(200).send()
+  })
 }
