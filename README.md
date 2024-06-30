@@ -2,7 +2,7 @@
 
 - [x] Deve ser possível criar um usuário
 - [x] Deve ser possível identificar o usuário entre as requisições
-- [ ] Deve ser possível recuperar as métricas de um usuário
+- [x] Deve ser possível recuperar as métricas de um usuário
   - [x] Quantidade total de refeições registradas
   - [x] Quantidade total de refeições dentro da dieta
   - [x] Quantidade total de refeições fora da dieta
