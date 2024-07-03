@@ -6,3 +6,4 @@ db/*db
 
 # Environment
 .env
+.env.test

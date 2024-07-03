@@ -163,7 +163,7 @@ export async function mealsRoutes(app: FastifyInstance) {
       }
 
       return reply.status(200).send({
-        meal,
+        ...meal,
       })
     },
   )
